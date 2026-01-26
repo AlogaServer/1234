@@ -14,7 +14,7 @@
     <div class="wrap nav">
       <a class="pill pill--small pill--orange" href="#cta">התחילו עכשיו</a>
 
-      <a class="brand" href="#top" aria-label="STORYTELLING">
+      <a class="brand" href="./index.html" aria-label="STORYTELLING">
         <span class="brand__black">STORY</span><span class="brand__orange">TELLING</span>
       </a>
     </div>
@@ -35,17 +35,12 @@
           </h1>
 
           <p class="hero__desc js-reveal" data-reveal="up" style="--d:120ms">
-            שכחנו מכל מה שחשבתם על יצירת תוכן.<br/>
-            עם <b>STORYTELLING</b> הכל פשוט. הכל קסום.
+            אל תבזבזו את הזמן שלכם.ן בשעות ארוכות של למידה<br/>
+            תנו לנו להראות לכם.ן איך הקסם קורה!
           </p>
 
           <div class="hero__actions js-reveal" data-reveal="up" style="--d:200ms">
             <a class="btn btn--primary" href="#cta">✍️ בואו נתחיל לספר</a>
-
-            <a class="btn btn--ghost" href="#steps" aria-label="צפו בסרטון">
-              <span class="play" aria-hidden="true"><span class="play__tri"></span></span>
-              <span class="btn__label">צפו בסרטון</span>
-            </a>
           </div>
         </div>
       </div>
@@ -66,8 +61,8 @@
             <div class="card__icon">🎯</div>
             <h3 class="card__title">מותאם אישית</h3>
             <p class="card__text">
-              כל סיפור מותאם בדיוק לצרכים שלכם.<br/>
-              בדיוק כמו שחלמתם.
+              ליווי צמוד, מהרעיון ועד התוצאה.<br/>
+              פשוט. מדויק. עובד.
             </p>
           </article>
 
@@ -75,7 +70,7 @@
             <div class="card__icon">⚡</div>
             <h3 class="card__title">מהיר ומדויק</h3>
             <p class="card__text">
-              תוצאות מרשימות תוך שניות.<br/>
+              תוצאות מרשימות תוך שניות*<br/>
               הבינה המלאכותית עושה את הקסם.
             </p>
           </article>
@@ -84,53 +79,18 @@
             <div class="card__icon">✨</div>
             <h3 class="card__title">פשוט להפליא</h3>
             <p class="card__text">
-              בלי מילים מסובכות, בלי הגדרות מייגעות.<br/>
-              פשוט מתחילים לספר.
+              אתם מתחילים רעיון קטן.<br/>
+              המערכת כבר עוזרת לו לגדול
             </p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- STEPS (DARK) -->
-    <section class="steps" id="steps">
-      <div class="wrap steps__grid">
-        <div class="steps__text">
-          <div class="mini js-reveal" data-reveal="fade">איך זה עובד?</div>
-
-          <h2 class="steps__title js-reveal" data-reveal="up">
-            שלושה צעדים<br/>
-            לתוכן <span class="accent">מושלם</span>
-          </h2>
-
-          <div class="stepList">
-            <div class="step js-reveal" data-reveal="up" style="--d:80ms">
-              <span class="step__num">1</span>
-              <div>
-                <h4>ספרו לנו מה אתם צריכים</h4>
-                <p>במילים פשוטות, בלי נתונים מקצועיים. פשוט את זה.</p>
-              </div>
-            </div>
-
-            <div class="step js-reveal" data-reveal="up" style="--d:140ms">
-              <span class="step__num">2</span>
-              <div>
-                <h4>תנו ל-AI לעשות את הקסם</h4>
-                <p>תוך שניות תקבלו תוכן מקצועי ומותאם בדיוק לצרכים.</p>
-              </div>
-            </div>
-
-            <div class="step js-reveal" data-reveal="up" style="--d:200ms">
-              <span class="step__num">3</span>
-              <div>
-                <h4>התאימו והפיצו</h4>
-                <p>עריכה קלה, שיתוף מהיר. התוכן שלכם מוכן לעולם.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="mock js-reveal" data-reveal="up" style="--d:140ms">
+    <!-- FULLSCREEN MOCK -->
+    <section class="demo" id="demo">
+      <div class="demo__inner js-reveal" data-reveal="up">
+        <div class="mock mock--full">
           <div class="mock__top">
             <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
             <span class="mock__hint">מה אני צריך ליצור היום?</span>
@@ -138,41 +98,21 @@
 
           <div class="mock__body">
             <div class="mock__line">
-              “זרוק פוסט לאינסטגרם על המוצר החדש שלי, משהו קליל ומצחיק”
+              אני רוצה תמונה שתרה איך בניין נראה על האדמה, כיאלו הוא כבר בנוי
             </div>
-            <ul class="mock__bullets">
-              <li>• יוצר את הסיפור שלך…</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- BENEFITS (WHITE) -->
-    <section class="benefits" id="benefits">
-      <div class="wrap">
-        <h2 class="h2 js-reveal" data-reveal="up">היתרונות שלנו</h2>
+            <div class="mock__status" aria-live="polite">
+              <span class="mock__statusText">• יוצר את הסיפור שלך…</span>
 
-        <div class="benefitsGrid">
-          <!-- שים לב: כדי שיראה כמו בצילום (04 03 02 01), סדר ה-HTML הוא 04->01 -->
-          <div class="miniCard js-reveal" data-reveal="stagger">
-            <div class="miniCard__num">04</div>
-            <div class="miniCard__txt">תמיכה בעברית מלאה</div>
-          </div>
-
-          <div class="miniCard js-reveal" data-reveal="stagger">
-            <div class="miniCard__num">03</div>
-            <div class="miniCard__txt">ללא צורך בידע טכני</div>
-          </div>
-
-          <div class="miniCard js-reveal" data-reveal="stagger">
-            <div class="miniCard__num">02</div>
-            <div class="miniCard__txt">תוכן מקצועי ברמה הגבוהה ביותר</div>
-          </div>
-
-          <div class="miniCard js-reveal" data-reveal="stagger">
-            <div class="miniCard__num">01</div>
-            <div class="miniCard__txt">חוסכים שעות של עבודה</div>
+              <span class="mock__loading" title="טוען...">
+                <span class="mock__loadingText">יוצר תמונה</span>
+                <span class="dots" aria-hidden="true">
+                  <span class="dot1"></span>
+                  <span class="dot2"></span>
+                  <span class="dot3"></span>
+                </span>
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -183,10 +123,18 @@
       <div class="wrap cta__inner">
         <h2 class="cta__title js-reveal" data-reveal="up">מוכנים להתחיל לספר?</h2>
         <p class="cta__sub js-reveal" data-reveal="up" style="--d:120ms">
-          הצטרפו לאלפי משתמשים שכבר יוצרים תוכן מדהים בקלות
+          הצטרפו לאלפי משתמשים שכבר למדו איך יוצרים תוכן מדהים בקלות
         </p>
 
-        <a class="btn btn--white js-reveal" data-reveal="up" style="--d:200ms" href="#top">
+        <!-- WhatsApp -->
+        <a
+          class="btn btn--white js-reveal"
+          data-reveal="up"
+          style="--d:200ms"
+          href="https://wa.me/972525797790"
+          target="_blank"
+          rel="noopener"
+        >
           ✨ התחילו בחינם
         </a>
       </div>
@@ -199,12 +147,16 @@
       <div class="brand brand--footer">
         <span class="brand__black">STORY</span><span class="brand__orange">TELLING</span>
       </div>
+
+      <div class="footer__links">
+        <a class="footer__link" href="./accessibility.html">הצהרת נגישות</a>
+      </div>
+
       <div class="footer__copy">© 2026 STORYTELLING. כל הזכויות שמורות.</div>
     </div>
   </footer>
 
-<script src="https://cdn.enable.co.il/licenses/enable-L53495f9nkt3ien9-0126-78404/init.js"></script>
-  <!-- Animations (stays inline to keep 2 files only) -->
+  <!-- Animations (inline to keep simple) -->
   <script>
     (function () {
       const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -214,15 +166,12 @@
       }
 
       const els = Array.from(document.querySelectorAll('.js-reveal'));
-
       const io = new IntersectionObserver((entries) => {
         entries.forEach(e => {
           if (!e.isIntersecting) return;
 
-          // reveal normal
           e.target.classList.add('is-in');
 
-          // stagger groups (cards, benefits)
           if (e.target.dataset.reveal === 'stagger') {
             const parent = e.target.parentElement;
             if (parent) {
@@ -241,6 +190,6 @@
       els.forEach(el => io.observe(el));
     })();
   </script>
+  <script src="https://cdn.enable.co.il/licenses/enable-L53495f9nkt3ien9-0126-78404/init.js"></script>
 </body>
 </html>
-
