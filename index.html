@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>STORYTELLING</title>
   <meta name="description" content="ליצור סיפורים מדהימים פשוט יותר מתמיד" />
+
+  <link rel="icon" type="image/png" href="./IMG.png" />
   <link rel="stylesheet" href="./style.css" />
 </head>
 
@@ -13,6 +15,12 @@
   <header class="topbar">
     <div class="wrap nav">
       <a class="pill pill--small pill--orange" href="#cta">התחילו עכשיו</a>
+
+      <nav class="tabs" aria-label="תפריט">
+        <a class="tab is-active" href="./index.html">בית</a>
+        <a class="tab" href="./about.html">אודות</a>
+        <a class="tab" href="./accessibility.html">הצהרת נגישות</a>
+      </nav>
 
       <a class="brand" href="./index.html" aria-label="STORYTELLING">
         <span class="brand__black">STORY</span><span class="brand__orange">TELLING</span>
@@ -126,7 +134,6 @@
           הצטרפו לאלפי משתמשים שכבר למדו איך יוצרים תוכן מדהים בקלות
         </p>
 
-        <!-- WhatsApp -->
         <a
           class="btn btn--white js-reveal"
           data-reveal="up"
@@ -149,6 +156,7 @@
       </div>
 
       <div class="footer__links">
+        <a class="footer__link" href="./about.html">אודות</a>
         <a class="footer__link" href="./accessibility.html">הצהרת נגישות</a>
       </div>
 
@@ -156,8 +164,7 @@
     </div>
   </footer>
 
-  <!-- Animations (inline to keep simple) -->
-  <script src="https://cdn.enable.co.il/licenses/enable-L53495f9nkt3ien9-0126-78404/init.js"></script>
+  <!-- Animations -->
   <script>
     (function () {
       const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

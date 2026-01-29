@@ -44,16 +44,86 @@ a{ color:inherit; text-decoration:none; }
   display:flex;
   align-items:center;
   justify-content:space-between;
+  gap:14px;
 }
 
 .brand{
   font-weight:900;
   letter-spacing:.2px;
   font-size:16.5px;
+  white-space:nowrap;
 }
 .brand__orange{ color:var(--orange2); }
 .brand__black{ color:#111; }
 .brand--footer .brand__black{ color:#fff; }
+
+/* ===== Tabs (Dynamic / Cosmic) ===== */
+.tabs{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding: 6px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,.08);
+  background: rgba(255,255,255,.35);
+  backdrop-filter: blur(10px);
+}
+
+.tab{
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 9px 14px;
+  border-radius: 999px;
+  font-weight: 900;
+  font-size: 14.5px;
+  color: rgba(0,0,0,.72);
+  transition: transform .18s ease, background .18s ease, color .18s ease;
+}
+
+.tab:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,.55);
+  color: rgba(0,0,0,.85);
+}
+
+.tab.is-active{
+  color: #111;
+  background: rgba(255,255,255,.78);
+  border: 1px solid rgba(0,0,0,.06);
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+  overflow:hidden;
+}
+
+.tab.is-active::before{
+  content:"";
+  position:absolute;
+  inset:-50%;
+  background:
+    radial-gradient(closest-side, rgba(255,122,34,.35), transparent 60%),
+    radial-gradient(closest-side, rgba(243,154,45,.25), transparent 62%),
+    radial-gradient(closest-side, rgba(255,255,255,.22), transparent 65%);
+  animation: cosmic 2.8s linear infinite;
+  filter: blur(2px);
+  opacity: .9;
+}
+
+.tab.is-active::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:999px;
+  background: linear-gradient(180deg, rgba(255,255,255,.75), rgba(255,255,255,.35));
+  opacity:.55;
+}
+
+.tab.is-active > *{ position:relative; z-index:1; }
+
+@keyframes cosmic{
+  0%{ transform: rotate(0deg) translateZ(0); }
+  100%{ transform: rotate(360deg) translateZ(0); }
+}
 
 /* ===== Pills / Buttons ===== */
 .pill{
@@ -291,7 +361,6 @@ a{ color:inherit; text-decoration:none; }
   font-size: 18px;
 }
 
-/* Status row + infinite loading */
 .mock__status{
   display:flex;
   align-items:center;
@@ -402,7 +471,7 @@ a{ color:inherit; text-decoration:none; }
   border-color: rgba(255,255,255,.20);
 }
 
-/* ===== Accessibility page styles ===== */
+/* ===== Pages ===== */
 .page{ min-height: calc(100vh - 56px); }
 
 .legalHero{
@@ -456,9 +525,7 @@ a{ color:inherit; text-decoration:none; }
   color: #2a2a2c;
   font-weight: 650;
 }
-.legalList li{
-  margin: 0 0 8px;
-}
+.legalList li{ margin: 0 0 8px; }
 .legalLink{
   color: var(--orange2);
   font-weight: 900;
@@ -471,6 +538,47 @@ a{ color:inherit; text-decoration:none; }
   justify-content:flex-start;
   padding: 16px 18px 20px;
   background: linear-gradient(180deg, #161617, #0f0f10);
+}
+
+/* ===== About ===== */
+.aboutGrid{
+  display:grid;
+  grid-template-columns: 420px 1fr;
+  gap: 18px;
+  padding: 22px;
+  align-items: start;
+}
+
+.aboutMedia{
+  position: sticky;
+  top: 80px;
+}
+
+.aboutPhoto{
+  width: 100%;
+  border-radius: 22px;
+  border: 1px solid rgba(0,0,0,.08);
+  box-shadow: 0 18px 60px rgba(0,0,0,.10);
+  background: #fff;
+}
+
+.aboutText{
+  padding: 6px 6px 0;
+}
+
+.aboutText p{
+  margin: 0 0 14px;
+  font-weight: 650;
+  color: #2a2a2c;
+  font-size: 18px;
+  line-height: 1.85;
+}
+
+.aboutActions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top: 16px;
 }
 
 /* ===== Reveal animations ===== */
@@ -494,11 +602,19 @@ a{ color:inherit; text-decoration:none; }
   .mock__status{ flex-direction:column; align-items:flex-start; }
   .footer__inner{ flex-direction:column; text-align:center; }
   .legalActions{ flex-direction:column; }
+
+  .tabs{ width: 100%; justify-content: center; }
+  .nav{ flex-wrap: wrap; height: auto; padding: 10px 0; }
+  .aboutGrid{ grid-template-columns: 1fr; }
+  .aboutMedia{ position: relative; top: auto; }
 }
+
 @media (max-width: 520px){
   .demo__inner{ min-height: 88vh; padding: 42px 14px; }
   .mock__body{ padding: 22px 16px; }
   .legalText{ padding: 22px 16px 14px; }
+  .aboutGrid{ padding: 16px; }
+  .tab{ padding: 9px 12px; }
 }
 
 /* ===== Reduced motion ===== */
@@ -506,5 +622,6 @@ a{ color:inherit; text-decoration:none; }
   html{ scroll-behavior:auto; }
   .js-reveal{ opacity:1 !important; transform:none !important; transition:none !important; }
   .dots span{ animation:none !important; }
-  .btn, .pill, .card, .footer__link{ transition:none !important; }
+  .btn, .pill, .card, .footer__link, .tab{ transition:none !important; }
+  .tab.is-active::before{ animation:none !important; }
 }
